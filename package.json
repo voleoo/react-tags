@@ -4,8 +4,9 @@
   "description": "React Tag Autocomplete is a simple tagging component ready to drop in your React projects.",
   "main": "dist/ReactTags.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --port 8090",
+    "test": "npm run build && npm run unit-test",
+    "unit-test": "tap 'test/*.spec.js' --reporter spec",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
     "build": "webpack -p && ./node_modules/.bin/babel ./lib --out-dir dist"
   },
   "keywords": [
@@ -30,8 +31,12 @@
   "devDependencies": {
     "babel": "^5.3.3",
     "babel-loader": "^5.1.2",
+    "jsdom": "^9.4.1",
     "react": "^15.2.1",
+    "react-addons-test-utils": "^15.2.1",
     "react-dom": "^15.2.1",
+    "sinon": "^1.17.4",
+    "tap": "^6.2.0",
     "webpack": "^1.9.4",
     "webpack-dev-server": "^1.8.2"
   }
