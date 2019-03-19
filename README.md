@@ -87,6 +87,7 @@ React.render(<App />, document.getElementById('app'))
 - [`allowNew`](#allownew-optional)
 - [`tagComponent`](#tagcomponent-optional)
 - [`inputAttributes`](#inputAttributes-optional)
+- [`ignoreFilterSuggestions`](#ignoreFilterSuggestions-optional)
 
 #### tags (optional)
 
@@ -236,6 +237,10 @@ Provide a custom tag component to render. Default: `null`.
 An object containing additional attributes that will be applied to the underlying `<input />` field.
 
 As an example `inputAttributes={{ maxLength: 10 }}` would be applied as `<input maxlength="10" … />`. Note this prop won't overwrite existing attributes, it can only add new ones.
+
+#### ignoreFilterSuggestions (optional)
+
+Allows to show all tags from the suggestions. Default: `false`.
 
 ### Styling
 
